@@ -12,7 +12,7 @@ const baseSchema = z.object({
 });
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.mdoc", base: "./src/content/blog" }),
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/blog" }),
   schema: z.discriminatedUnion("external", [
     // markdown post
     baseSchema.extend({
@@ -34,7 +34,7 @@ const blog = defineCollection({
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.mdoc", base: "./src/content/projects" }),
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/projects" }),
   schema: baseSchema.extend({
     url: z.string(),
   }),

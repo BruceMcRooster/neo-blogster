@@ -1,8 +1,17 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import markdoc from "@astrojs/markdoc";
+import mdx from "@astrojs/mdx";
 
 export default defineConfig({
   site: "https://yourwebsiteurl.com",
-  integrations: [sitemap(), markdoc()],
+  integrations: [sitemap(), mdx()],
+  markdown: {
+    shikiConfig: {
+      themes: {
+        dark: "catppuccin-macchiato",
+        light: "catppuccin-latte",
+      },
+      wrap: false,
+    }
+  }
 });
