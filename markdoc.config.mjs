@@ -5,7 +5,10 @@ export default defineMarkdocConfig({
   extends: [
     shiki({
       // catppuccin-macchiato matches the aesthetic of the previous Prism theme
-      theme: "catppuccin-macchiato",
+      themes: {
+        dark: "catppuccin-macchiato",
+        light: "catppuccin-latte",
+      },
       wrap: false,
     }),
   ],
