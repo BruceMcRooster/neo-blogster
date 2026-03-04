@@ -1,0 +1,92 @@
+{
+  "$ref": "#/definitions/blog",
+  "definitions": {
+    "blog": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "draft": {
+              "type": "boolean",
+              "default": false
+            },
+            "featured": {
+              "type": "boolean",
+              "default": false
+            },
+            "title": {
+              "type": "string"
+            },
+            "date": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "integer",
+                  "format": "unix-time"
+                }
+              ]
+            },
+            "external": {
+              "type": "boolean",
+              "const": false
+            },
+            "description": {
+              "type": "string"
+            },
+            "ogImagePath": {
+              "type": "string"
+            },
+            "canonicalUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "date",
+            "external"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "draft": {
+              "$ref": "#/definitions/blog/anyOf/0/properties/draft"
+            },
+            "featured": {
+              "$ref": "#/definitions/blog/anyOf/0/properties/featured"
+            },
+            "title": {
+              "$ref": "#/definitions/blog/anyOf/0/properties/title"
+            },
+            "date": {
+              "$ref": "#/definitions/blog/anyOf/0/properties/date"
+            },
+            "external": {
+              "type": "boolean",
+              "const": true
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "date",
+            "external",
+            "url"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
