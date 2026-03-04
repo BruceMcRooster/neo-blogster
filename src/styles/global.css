@@ -114,12 +114,23 @@ code.unset {
 	border: none;
 }
 
-pre {
-	padding: 1rem;
+/* Shiki outputs <pre class="astro-code"> with inline background-color styles.
+   Give it rounded corners and scroll, but don't clobber its color/font styles. */
+pre.astro-code {
+	border-radius: 0.4rem;
+	overflow-x: auto;
+	padding: 1rem 1.25rem;
+	margin: 1rem 0;
 }
 
-pre>code {
-	all: unset;
+pre.astro-code > code {
+	background: none;
+	border: none;
+	padding: 0;
+	border-radius: 0;
+	color: inherit;
+	font-size: 0.9em;
+	line-height: 1.6;
 }
 
 blockquote:not(.unset) {

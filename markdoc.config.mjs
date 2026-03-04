@@ -1,6 +1,14 @@
 import { defineMarkdocConfig, component, nodes } from "@astrojs/markdoc/config";
+import shiki from "@astrojs/markdoc/shiki";
 
 export default defineMarkdocConfig({
+  extends: [
+    shiki({
+      // catppuccin-macchiato matches the aesthetic of the previous Prism theme
+      theme: "catppuccin-macchiato",
+      wrap: false,
+    }),
+  ],
   tags: {
     details: {
       render: component("./src/components/markdoc/Details.astro"),
@@ -62,22 +70,6 @@ export default defineMarkdocConfig({
         id: { type: String, required: true },
       },
       selfClosing: true,
-    },
-  },
-  nodes: {
-    heading: {
-      render: component("./src/components/Heading.astro"),
-      attributes: {
-        level: { type: Number, required: true },
-      },
-    },
-    fence: {
-      render: component("./src/components/CodeBlock.astro"),
-      attributes: {
-        content: { type: String, render: false, required: true },
-        language: { type: String, default: "typescript" },
-        process: { type: Boolean, render: false, default: false },
-      },
     },
   },
 });

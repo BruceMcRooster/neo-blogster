@@ -6,7 +6,6 @@
       "name": "blogster-minimal",
       "dependencies": {
         "@astrojs/markdoc": "^0.15.10",
-        "@astrojs/prism": "3.3.0",
         "@astrojs/rss": "4.0.15",
         "@astrojs/sitemap": "3.7.0",
         "astro": "5.18.0",
