@@ -12,6 +12,7 @@
         "katex": "^0.16.33",
         "rehype-callouts": "^2.1.2",
         "rehype-katex": "^7.0.1",
+        "rehype-semantic-blockquote": "^0.1.1",
         "remark-math": "^6.0.0",
         "zod": "^3.20.2",
       },
@@ -690,7 +691,11 @@
 
     "rehype-recma": ["rehype-recma@1.0.0", "", { "dependencies": { "@types/estree": "^1.0.0", "@types/hast": "^3.0.0", "hast-util-to-estree": "^3.0.0" } }, "sha512-lqA4rGUf1JmacCNWWZx0Wv1dHqMwxzsDWYMTowuplHF3xH0N/MmrZ/G3BDZnzAkRmxDadujCjaKM2hqYdCBOGw=="],
 
+    "rehype-semantic-blockquote": ["rehype-semantic-blockquote@0.1.1", "", { "dependencies": { "rehype": "^13.0.2", "rehype-stringify": "^10.0.1", "remark": "^15.0.1", "remark-parse": "^11.0.0", "remark-rehype": "^11.1.1", "unist-util-visit": "^5.0.0" } }, "sha512-wi8BIC7N4pJFySJwr/UQkeFbeejA2dodKRY+96CAHhg/9/u+lB6KBcBAs0DZRiCprTlhX8eMNOSUPPiiW4wg0w=="],
+
     "rehype-stringify": ["rehype-stringify@10.0.1", "", { "dependencies": { "@types/hast": "^3.0.0", "hast-util-to-html": "^9.0.0", "unified": "^11.0.0" } }, "sha512-k9ecfXHmIPuFVI61B9DeLPN0qFHfawM6RsuX48hoqlaKSF61RskNjSm1lI8PhBEM0MRdLxVVm4WmTqJQccH9mA=="],
+
+    "remark": ["remark@15.0.1", "", { "dependencies": { "@types/mdast": "^4.0.0", "remark-parse": "^11.0.0", "remark-stringify": "^11.0.0", "unified": "^11.0.0" } }, "sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A=="],
 
     "remark-gfm": ["remark-gfm@4.0.1", "", { "dependencies": { "@types/mdast": "^4.0.0", "mdast-util-gfm": "^3.0.0", "micromark-extension-gfm": "^3.0.0", "remark-parse": "^11.0.0", "remark-stringify": "^11.0.0", "unified": "^11.0.0" } }, "sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg=="],
 

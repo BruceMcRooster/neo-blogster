@@ -4,6 +4,7 @@ import mdx from "@astrojs/mdx";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeCallouts from "rehype-callouts";
+import rehypeSemanticBlockquote from "rehype-semantic-blockquote";
 
 export default defineConfig({
   site: "https://yourwebsiteurl.com",
@@ -17,6 +18,10 @@ export default defineConfig({
       wrap: false,
     },
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex, [rehypeCallouts, { theme: "vitepress" }]],
+    rehypePlugins: [
+      rehypeKatex,
+      [rehypeCallouts, { theme: "vitepress" }],
+      [rehypeSemanticBlockquote, { className: 'quote' }],
+    ],
   }
 });

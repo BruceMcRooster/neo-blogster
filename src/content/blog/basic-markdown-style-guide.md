@@ -59,6 +59,18 @@ To enable more semantic html generation, [`rehype-callouts`](https://github.com/
 > [!Warning]- This is a *collapsible* callout.
 > It has some body text that is hidden by default, using default browser APIs (no JavaScript is sent down). Note the `-` after `[!Warning]`.
 
+For further semantics, [`rehype-semantic-blockquote`](https://github.com/dmtrmrv/rehype-semantic-blockquote) is used to convert blockquotes into semantic HTML elements using `<figure>` and `<figcaption>`.
+
+```markdown
+> Sometimes life hits you in the head with a brick. Don't lose faith.
+
+-- Steve Jobs
+```
+
+> Sometimes life hits you in the head with a brick. Don't lose faith.
+
+-- Steve Jobs
+
 ## Tables
 
 | Italics   | Bold     | Code   |
