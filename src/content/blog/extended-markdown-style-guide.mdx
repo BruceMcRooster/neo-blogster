@@ -1,7 +1,7 @@
 ---
 external: false
 title: "Extended markdown style guide"
-description: "In addition to supporting all basic Markdoc syntax, this template also supports extended markdown syntax to render custom components."
+description: "In addition to supporting all basic Markdown syntax, this template also supports extended markdown syntax to render custom components."
 date: 2022-11-01
 ---
 
@@ -10,11 +10,15 @@ import TweetEmbed from '../../components/TweetEmbed.astro';
 import CodePenEmbed from '../../components/CodePenEmbed.astro';
 import GitHubGistEmbed from '../../components/GitHubGistEmbed.astro';
 
-This blog's markdown is powered by [Markdoc](https://markdoc.dev/). In addition to supporting all basic markdown syntax, this blog also supports extended syntax to render custom components that are not conventionally available via basic markdown. This post is an example to showcase all available extended markdown syntax.
+This blog's markdown uses [MDX](https://mdxjs.com/) to support extended syntax to render custom components that are not conventionally available via basic markdown. This post is an example to showcase all available extended markdown syntax.
 
 ## YouTube Video
 
 You can embed YouTube videos in your blog posts.
+
+```mdx
+<YouTubeEmbed url="https://www.youtube-nocookie.com/embed/StTqXEQ2l-Y" label="Everything is awesome - Lego movie song" />
+```
 
 <YouTubeEmbed url="https://www.youtube-nocookie.com/embed/StTqXEQ2l-Y" label="Everything is awesome - Lego movie song" />
 
@@ -22,11 +26,19 @@ You can embed YouTube videos in your blog posts.
 
 You can embed tweets in your blog posts.
 
+```mdx
+<TweetEmbed url="https://twitter.com/flexdinesh/status/1605685194312122370" />
+```
+
 <TweetEmbed url="https://twitter.com/flexdinesh/status/1605685194312122370" />
 
 ## CodePen
 
 You can embed codepens in your blog posts.
+
+```mdx
+<CodePenEmbed url="https://codepen.io/ruphaa/pen/eYJqjgq" title="Ecosystem - Pen in CSS by Ruphaa" />
+```
 
 <CodePenEmbed url="https://codepen.io/ruphaa/pen/eYJqjgq" title="Ecosystem - Pen in CSS by Ruphaa" />
 
@@ -34,31 +46,69 @@ You can embed codepens in your blog posts.
 
 You can embed GitHub gists in your blog posts.
 
+```mdx
+<GitHubGistEmbed id="d96064c9c4ef2e8ef71c90a10ffcf3b2" />
+```
+
 <GitHubGistEmbed id="d96064c9c4ef2e8ef71c90a10ffcf3b2" />
 
 ## Lesser Known HTML Elements
 
+These just use standard HTML elements.
+
 ### abbr
+
+```mdx
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+```
 
 <abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 
 ### sub
 
+```mdx
+H<sub>2</sub>O
+```
+
 H<sub>2</sub>O
 
 ### sup
+
+```mdx
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+```
 
 X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
 ### kbd
 
+```mdx
+Press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd> to end the session.
+```
+
 Press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd> to end the session.
 
 ### mark
 
+```mdx
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+```
+
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
 
 ### math
+
+The markdown also uses [KaTeX](https://katex.org/) (rendered at build time) for beautiful math rendering.
+
+```mdx
+Inline ($e^{i \pi} + 1 = 0$) and block math:
+
+$$
+\sum_{i=0}^n i = \frac{n(n+1)}{2}
+$$
+```
+
+Inline ($e^{i \pi} + 1 = 0$) and block math:
 
 $$
 \sum_{i=0}^n i = \frac{n(n+1)}{2}

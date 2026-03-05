@@ -1,11 +1,11 @@
 ---
 external: false
-title: "Prism.js syntax highlighting for code blocks"
-description: "Code blocks are syntax highlighted using Prism.js"
+title: "Shiki syntax highlighting for code blocks"
+description: "Code blocks are syntax highlighted using Shiki"
 date: 2022-10-30
 ---
 
-Syntax highlighting is done using [Prism.js](https://github.com/PrismJS/prism) with the default [nord theme](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-nord.css). You can customise to whichever theme you want from the [plenty available prism themes](https://github.com/PrismJS/prism-themes).
+Syntax highlighting is done using [Shiki](https://github.com/shikijs/shiki) with the Catppuccin Latte and Catppuccin Macchiato themes for light and dark mode. You can customise to whichever theme you want from the [plenty available Shiki themes](https://shiki.style/themes).
 
 ## HTML Code Block
 
@@ -46,4 +46,4 @@ An example `css` code block.
 }
 ```
 
-...and many more. [Explore all the languages supported by Prism.js](https://prismjs.com/#supported-languages).
+...and many more. [Explore all the languages supported by Shiki](https://shiki.style/languages).
