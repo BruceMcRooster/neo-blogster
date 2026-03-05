@@ -175,6 +175,10 @@ ul li {
 	margin-bottom: 0.4em;
 }
 
+.callout[data-callout] {
+    width: auto; /* Fix spillover caused by default callout style. */
+}
+
 /* ------ GLOBAL STYLES - END ------ */
 
 /* ------ REUSABLE UTIL STYLES - START ------ */

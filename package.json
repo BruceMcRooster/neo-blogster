@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "3.7.0",
     "astro": "5.18.0",
     "katex": "^0.16.33",
+    "rehype-callouts": "^2.1.2",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "zod": "^3.20.2"

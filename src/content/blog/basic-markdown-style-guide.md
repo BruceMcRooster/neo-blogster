@@ -43,6 +43,22 @@ Paragraphs can be multiline too when they constitute words that make up more tha
 
 > You can use other Markdown syntax like `inline code` within a blockquote.
 
+To enable more semantic html generation, [`rehype-callouts`](https://github.com/lin-stephanie/rehype-callouts) is used to make GitHub-style callouts using blockquote syntax.
+
+```markdown
+> [!Note] This is a callout.
+> It has some body text.
+
+> [!Warning]- This is a *collapsible* callout.
+> It has some body text that is hidden by default, using default browser APIs (no JavaScript is sent down). Note the `-` after `[!Warning]`.
+```
+
+> [!Note] This is a callout.
+> It has some body text.
+
+> [!Warning]- This is a *collapsible* callout.
+> It has some body text that is hidden by default, using default browser APIs (no JavaScript is sent down). Note the `-` after `[!Warning]`.
+
 ## Tables
 
 | Italics   | Bold     | Code   |
