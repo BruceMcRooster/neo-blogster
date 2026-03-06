@@ -8,6 +8,7 @@ import "../styles/global.css";
 import "../styles/markdown.css";
 
 import 'rehype-callouts/theme/vitepress';
+import 'katex/dist/katex-swap.min.css';
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -33,7 +34,6 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.css" integrity="sha384-fgYS3VC1089n2J3rVcEbXDHlnDLQ9B2Y1hvpQ720q1NvxCduQqT4JoGc4u2QCnzE" crossorigin="anonymous">
     <Favicon />
     <slot name="meta" />
   </head>
