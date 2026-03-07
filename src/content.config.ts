@@ -1,5 +1,7 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
+import { WRITER_TIMEZONE } from "./config";
+import { DateTime } from "luxon";
 
 const baseSchema = z.object({
   draft: z.boolean().default(false),
@@ -8,7 +10,13 @@ const baseSchema = z.object({
     required_error: "Required frontmatter missing: title",
     invalid_type_error: "title must be a string",
   }),
-  date: z.coerce.date(),
+  date: z.coerce.date().transform((dateInUtc : Date) => {
+    // Zod will parse the date as UTC.
+    // Hard convert it to writer's timezone (don't let it change the time for the timezone shift).
+    return DateTime.fromJSDate(dateInUtc, { zone: 'UTC' })
+      .setZone(WRITER_TIMEZONE, { keepLocalTime: true })
+      .toJSDate();
+  }),
 });
 
 const blog = defineCollection({

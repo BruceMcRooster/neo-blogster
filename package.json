@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "3.7.0",
     "astro": "5.18.0",
     "katex": "^0.16.33",
+    "luxon": "^3.7.2",
     "rehype-callouts": "^2.1.2",
     "rehype-katex": "^7.0.1",
     "rehype-semantic-blockquote": "^0.1.1",

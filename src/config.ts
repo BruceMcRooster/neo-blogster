@@ -9,3 +9,8 @@ export const MY_NAME = "Captain Awesome";
 
 // Set via `site` in astro.config.mjs
 export const SITE_URL = import.meta.env.SITE ?? "https://yourwebsiteurl.com";
+
+// Setting this will make dates in your time zone, so they appear correctly in your browser
+// (assuming you're in your timezone).
+// Must be a valid IANA timezone name.
+export const WRITER_TIMEZONE = "Etc/UTC";
